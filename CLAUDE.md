@@ -1,0 +1,1 @@
+- 保持 commit message 簡單，可以使用 /give-me-a-commit-message command 來產出，message body不要帶claude宣告。
