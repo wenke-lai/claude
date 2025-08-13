@@ -4,3 +4,4 @@ todos/
 statsig/
 ide/
 settings.json
+.credentials.json
