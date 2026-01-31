@@ -1,6 +1,7 @@
-- description: Generate a commit message from staged changes (ask before committing)
-  allowed-tools: Bash(git status:_), Bash(git diff:_), Bash(git log:_), Bash(git commit:_)
--
+---
+description: Generate a commit message from staged changes (ask before committing)
+allowed-tools: Bash(git status:_), Bash(git diff:_), Bash(git log:_), Bash(git commit:_)
+---
 
 ## Context
 
