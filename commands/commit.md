@@ -25,3 +25,23 @@ allowed-tools: Bash(git status:_), Bash(git diff:_), Bash(git log:_), Bash(git c
 ## Example
 
 `feat(cms): add page management system with tree structure`
+
+## !!IMPORTANT!!
+
+When to use refactor:
+
+Refactoring is strictly for internal structural changes with no change in external behavior. The inputs, outputs,
+functionality, and user-visible results remain identical — only the internal implementation differs.
+
+Valid examples:
+
+- Extract shared function/component when behavior is already identical across all call sites
+- Rename variables/files
+- Move code between files or reorganize directory structure
+- Eliminate code duplication
+
+When NOT to use refactor:
+
+- Adding behavior that didn't exist before → feat (e.g., adding breadcrumbs to pages that had none)
+- Fixing incorrect existing behavior → fix (e.g., breadcrumbs missing the Home link)
+- Mixed: both new behavior and structural changes → use feat or fix based on the primary behavioral change
