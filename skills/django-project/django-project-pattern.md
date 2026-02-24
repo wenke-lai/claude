@@ -123,7 +123,6 @@ from ninja import NinjaAPI
 api = NinjaAPI()
 
 
-@api.get("/", include_in_schema=False)
 def index(request):
     return redirect("/api/docs")
 
@@ -144,9 +143,10 @@ def multiple_objects_returned(request, exc):
 from django.contrib import admin
 from django.urls import path
 
-from .apis import api
+from .apis import api, index
 
 urlpatterns = [
+    path("", index),
     path("admin/", admin.site.urls),
     path("api/", api.urls),
 ]
@@ -254,7 +254,7 @@ dev: ## Start development server
 
 preview: ## Preview with gunicorn
 	$(PYTHON) python manage.py collectstatic --noinput
-	$(PYTHON) gunicorn server.wsgi:application
+	$(PYTHON) gunicorn server.wsgi:application --bind 0.0.0.0:8000
 
 migrate: ## Run database migrations
 	$(PYTHON) python manage.py migrate
