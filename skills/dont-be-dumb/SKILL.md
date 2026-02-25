@@ -1,8 +1,8 @@
 ---
 name: dont-be-dumb
-description: Rules and corrections that apply to every task — read before doing anything
+description: Corrections for committing, running tests/lint/format, and answering questions
 user-invocable: true
-disable-model-invocation: true
+disable-model-invocation: false
 allowed-tools: Read
 ---
 
